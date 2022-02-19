@@ -187,6 +187,7 @@ img.product-image {
   position: relative;
   vertical-align: top;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .product-thumbnail-container.active img {
