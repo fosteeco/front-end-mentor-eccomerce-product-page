@@ -1,0 +1,10 @@
+.attribution {
+  position: fixed;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+  color: var(--soft-blue);
+}
+.attribution a {
+  color: var(--white);
+}
