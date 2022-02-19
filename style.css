@@ -1,3 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --orange: hsl(26, 100%, 55%);
+  --paleOrange: hsl(25, 100%, 94%);
+  --veryDarkBlue: hsl(25, 100%, 94%);
+  --darkGrayishBlue: hsl(219, 9%, 45%);
+  --lightGrayishBlue: hsl(223, 64%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+}
+
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Kumbh', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.account-nav {
+  margin-left: auto;
+}
+
+.avatar {
+  width: 40px;
+}
+
 .attribution {
   position: fixed;
   bottom: 0;
