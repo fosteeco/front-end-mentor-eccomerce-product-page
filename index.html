@@ -18,26 +18,128 @@
   <body>
     <header>
       <nav class="main-nav">
-        <ul class="main-nav-ul">
-          <li><img src="./images/logo.svg" alt="" /></li>
-          <li>Collecitons</li>
-          <li>Men</li>
-          <li>Women</li>
-          <li>About</li>
-          <li>Contact</li>
+        <img src="./images/logo.svg" alt="" />
+        <ul class="main-nav-ul desktop-nav-wrap">
+          <li><a href="">Collections</a></li>
+          <li><a href="">Men</a></li>
+          <li><a href="">Women</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
         </ul>
-        <ul class="account-nav">
+        <button id="slide-mobile" class="account-nav mobile-nav-button">
+          ShowMobile
+        </button>
+        <ul class="account-nav desktop-nav-wrap">
           <li><img src="./images/icon-cart.svg" alt="" /></li>
           <li><img class="avatar" src="./images/image-avatar.png" alt="" /></li>
         </ul>
       </nav>
+
+      <nav id="mobile-sliding-nav" class="mobile-sliding-nav">
+        <header class="mobile-nav-header">
+          <div class="li-brand"><img src="./images/logo.svg" alt="" /></div>
+          <button id="close-mobile" class="account-nav mobile-nav-button">
+            ShowMobile
+          </button>
+        </header>
+        <ul class="mobile-nav-ul">
+          <li class="li-link"><a href="">Collections</a></li>
+          <li class="li-link"><a href="">Men</a></li>
+          <li class="li-link"><a href="">Women</a></li>
+          <li class="li-link"><a href="">About</a></li>
+          <li class="li-link"><a href="">Contact</a></li>
+        </ul>
+        <h2>My Account</h2>
+        <ul class="mobile-account-nav">
+          <li>
+            <div class="add-to-cart">
+              <img class="cart-img" src="./images/icon-cart.svg" alt="" />My
+              Cart
+            </div>
+          </li>
+          <li class="profile-list-item">
+            <img class="avatar" src="./images/image-avatar.png" alt="" />
+            My Profile
+          </li>
+        </ul>
+      </nav>
       <hr />
     </header>
-    Collections Men Women About Contact Sneaker Company Fall Limited Edition
-    Sneakers These low-profile sneakers are your perfect casual wear companion.
-    Featuring a durable rubber outer sole, they’ll withstand everything the
-    weather can offer. $125.00 50% $250.00 0 Add to cart
-
+    <main>
+      <article class="product-showcase">
+        <section class="product-visual-container">
+          <div class="main-image-container">
+            <img
+              class="product-image"
+              src="./images/image-product-1.jpg"
+              alt=""
+            />
+            <div class="thumbnails-container">
+              <div class="product-thumbnail-container active">
+                <img
+                  class="product-thumbnail"
+                  src="./images/image-product-1-thumbnail.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="product-thumbnail-container">
+                <img
+                  class="product-thumbnail"
+                  src="./images/image-product-2-thumbnail.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="product-thumbnail-container">
+                <img
+                  class="product-thumbnail"
+                  src="./images/image-product-3-thumbnail.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="product-thumbnail-container">
+                <img
+                  class="product-thumbnail"
+                  src="./images/image-product-4-thumbnail.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="product-description-container">
+          <p class="orange-text b-700 company-title">SNEAKERS COMPANY</p>
+          <h2>Fall Limited Edition Sneakers</h2>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="price-container">
+            <div class="price-text b-700">$125.00</div>
+            <div class="sale-text orange-text b-700">50%</div>
+          </div>
+          <div class="original-price b-700">$250.00</div>
+          <div class="cart-container">
+            <div class="quantity-box">
+              <button id="minus-button" class="minus-button orange-text b-700">
+                -
+              </button>
+              <div class="quantity b-700" id="quantity">0</div>
+              <button id="plus-button" class="plus-button orange-text b-700">
+                +
+              </button>
+            </div>
+            <button class="add-to-cart" id="add-to-cart">
+              <img class="cart-img" src="./images/icon-cart.svg" alt="" />
+              Add to Cart
+            </button>
+          </div>
+          <div class="error-message b-700 d-none" id="error-message">
+            ERROR:
+          </div>
+        </section>
+      </article>
+    </main>
     <div class="attribution">
       Challenge by
       <a
@@ -51,5 +153,6 @@
         >Link to Repo</a
       >
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
