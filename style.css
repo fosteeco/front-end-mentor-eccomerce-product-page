@@ -218,10 +218,10 @@ img.product-image {
   bottom: 0;
   font-size: 11px;
   text-align: center;
-  color: var(--soft-blue);
+  color: var(--black);
 }
 .attribution a {
-  color: var(--white);
+  color: var(--black);
 }
 
 .mobile-sliding-nav {
