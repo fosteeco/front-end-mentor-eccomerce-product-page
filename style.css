@@ -31,7 +31,13 @@ body {
 
 .main-nav {
   display: flex;
+  padding: 0 10px;
   align-items: center;
+  min-height: 60px;
+}
+
+.brand-logo {
+  margin-right: 20px;
 }
 
 .main-nav ul {
@@ -241,8 +247,20 @@ img.product-image {
 .mobile-sliding-nav.active {
   transform: translateY(0);
 }
-.mobile-nav-button {
+button.mobile-nav-button {
   display: none;
+}
+
+.hamburger-button {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger-button .bar {
+  width: 25px;
+  height: 5px;
+  background-color: gray;
 }
 
 .mobile-nav-header {
@@ -293,7 +311,13 @@ img.product-image {
   .desktop-nav-wrap {
     display: none !important;
   }
-  .mobile-nav-button {
+  button.mobile-nav-button {
     display: block;
+    font-size: 50px;
+    color: gray;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    padding: 0;
   }
 }
