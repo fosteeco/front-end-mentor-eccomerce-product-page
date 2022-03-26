@@ -139,6 +139,7 @@ nav ul a:hover {
   border: 0;
   border-radius: 10px;
   padding: 10px 40px;
+  cursor: pointer;
 }
 
 .cart-img {
@@ -160,6 +161,51 @@ a:visited {
 
 .avatar {
   width: 40px;
+  cursor: pointer;
+}
+.avatar:hover {
+  border-radius: 100%;
+  box-shadow: 0 0 0 2px var(--orange);
+}
+
+.avatar-container {
+  position: relative;
+}
+
+.cart-preview {
+  position: absolute;
+  z-index: 9999;
+  width: 300px;
+  height: 200px;
+  top: 56px;
+  right: 0;
+  background-color: var(--white);
+  -webkit-box-shadow: -1px 16px 47px -14px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 16px 47px -14px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 16px 47px -14px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-preview h3 {
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--darkGrayishBlue);
+}
+
+.cart-info {
+  color: var(--darkGrayishBlue);
+  flex: 1;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
 }
 
 .product-showcase {

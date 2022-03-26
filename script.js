@@ -101,3 +101,18 @@ rightImageArrow.addEventListener("click", () => {
 const changeMobileImage = () => {
   mobileImage.src = Object.values(images)[imagePos];
 };
+
+/* Avatar cart code */
+
+const avatar = document.querySelector("#avatar");
+const cartPreview = document.querySelector("#cart-preview");
+
+avatar.addEventListener("click", () => {
+  cartPreview.classList.toggle("hide");
+  console.log("clicked on avatar");
+});
+
+/* Add to cart */
+const addtoCartBtn = document.querySelector("#add-to-cart");
+
+addtoCartBtn.addEventListener("click", () => {});
