@@ -2,6 +2,8 @@
 
 Link for Preview: https://fosteeco.github.io/front-end-mentor-eccomerce-product-page/
 
+Challenge Link: https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6/hub/ecommerce-product-page-qVDHYBmur
+
 ![Design preview for the E-commerce product page coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
