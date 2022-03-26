@@ -73,3 +73,31 @@ thumbnails.forEach((thumbnail) => {
     thumbnail.classList.add("active");
   });
 });
+
+/* Mobile code carousel code */
+const mobileImage = document.querySelector("#mobile-product-image");
+const leftImageArrow = document.querySelector("#left-image-arrow");
+const rightImageArrow = document.querySelector("#right-image-arrow");
+let imagePos = 0;
+
+leftImageArrow.addEventListener("click", () => {
+  if (imagePos === 0) {
+    imagePos = 3;
+  } else {
+    imagePos--;
+  }
+  changeMobileImage();
+});
+
+rightImageArrow.addEventListener("click", () => {
+  if (imagePos === 3) {
+    imagePos = 0;
+  } else {
+    imagePos++;
+  }
+  changeMobileImage();
+});
+
+const changeMobileImage = () => {
+  mobileImage.src = Object.values(images)[imagePos];
+};

@@ -18,6 +18,13 @@
   <body>
     <header>
       <nav class="main-nav">
+        <button id="slide-mobile" class="mobile-nav-button">
+          <div class="hamburger-button">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </button>
         <img src="./images/logo.svg" class="brand-logo" alt="" />
         <ul class="main-nav-ul desktop-nav-wrap">
           <li><a href="">Collections</a></li>
@@ -26,14 +33,7 @@
           <li><a href="">About</a></li>
           <li><a href="">Contact</a></li>
         </ul>
-        <button id="slide-mobile" class="account-nav mobile-nav-button">
-          <div class="hamburger-button">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </div>
-        </button>
-        <ul class="account-nav desktop-nav-wrap">
+        <ul class="account-nav">
           <li><img src="./images/icon-cart.svg" alt="" /></li>
           <li><img class="avatar" src="./images/image-avatar.png" alt="" /></li>
         </ul>
@@ -41,10 +41,7 @@
 
       <nav id="mobile-sliding-nav" class="mobile-sliding-nav">
         <header class="mobile-nav-header">
-          <div class="li-brand"><img src="./images/logo.svg" alt="" /></div>
-          <button id="close-mobile" class="account-nav mobile-nav-button">
-            X
-          </button>
+          <button id="close-mobile" class="mobile-nav-button">X</button>
         </header>
         <ul class="mobile-nav-ul">
           <li class="li-link"><a href="">Collections</a></li>
@@ -53,25 +50,28 @@
           <li class="li-link"><a href="">About</a></li>
           <li class="li-link"><a href="">Contact</a></li>
         </ul>
-        <h2>My Account</h2>
-        <ul class="mobile-account-nav">
-          <li>
-            <div class="add-to-cart">
-              <img class="cart-img" src="./images/icon-cart.svg" alt="" />My
-              Cart
-            </div>
-          </li>
-          <li class="profile-list-item">
-            <img class="avatar" src="./images/image-avatar.png" alt="" />
-            My Profile
-          </li>
-        </ul>
       </nav>
       <hr />
     </header>
     <main>
       <article class="product-showcase">
-        <section class="product-visual-container">
+        <section class="mobile-product-container product-visual-container">
+          <div class="mobile-image-container">
+            <img
+              class="product-image-mobile"
+              id="mobile-product-image"
+              src="./images/image-product-1.jpg"
+              alt=""
+            />
+            <button id="left-image-arrow" class="arrow left-arrow">
+              &lsaquo;
+            </button>
+            <button id="right-image-arrow" class="arrow right-arrow">
+              &rsaquo;
+            </button>
+          </div>
+        </section>
+        <section class="desktop-product-container product-visual-container">
           <div class="main-image-container">
             <img
               class="product-image"
@@ -120,10 +120,12 @@
             the weather can offer.
           </p>
           <div class="price-container">
-            <div class="price-text b-700">$125.00</div>
-            <div class="sale-text orange-text b-700">50%</div>
+            <div class="price-text">
+              <span class="b-700"> $125.00</span>
+              <span class="sale-text orange-text b-700">50%</span>
+            </div>
+            <div class="original-price b-700">$250.00</div>
           </div>
-          <div class="original-price b-700">$250.00</div>
           <div class="cart-container">
             <div class="quantity-box">
               <button id="minus-button" class="minus-button orange-text b-700">
