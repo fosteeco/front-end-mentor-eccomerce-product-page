@@ -205,6 +205,12 @@ a:visited {
   /* align-items: center; */
 }
 
+.cart-info.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .cart-total {
   font-weight: bold;
 }

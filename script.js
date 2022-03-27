@@ -106,6 +106,7 @@ const changeMobileImage = () => {
 
 const avatar = document.querySelector("#avatar");
 const cartPreview = document.querySelector("#cart-preview");
+const cartInfo = document.querySelector("#cart-info");
 
 avatar.addEventListener("click", () => {
   cartPreview.classList.toggle("hide");
@@ -122,9 +123,41 @@ const showToast = () => {
     toastMessage.classList.remove("show");
   }, 2000);
 };
+
 addtoCartBtn.addEventListener("click", () => {
   if (qVal >= 1) {
     toastMessage.innerHTML = `<h3>Added ${qVal} Shoe(s) to cart<h3>`;
     showToast();
+    buildCartPreview(qVal);
   }
 });
+
+const setEmptyCart = () => {
+  cartInfo.innerHTML = `<div class="cart-info empty">Your cart is empty</div>`;
+};
+
+const buildCartPreview = (quantity) => {
+  let cartHtml = `<div class="shoe-cart-preview">
+              <img
+                class="product-thumbnail"
+                src="./images/image-product-1-thumbnail.jpg"
+                alt=""
+              />
+              <div class="cart-breakdown">
+                <div class="shoe-cart-desc">Fall Limited Edition Sneakers</div>
+                <div>
+                  <span class="product-price">$125.00</span> x
+                  <span class="product-qty">${quantity}</span>
+                  <span class="cart-total">$${(quantity * 125).toFixed(
+                    2
+                  )}</span>
+                </div>
+              </div>
+              <button id="checkout-delete" onClick="setEmptyCart()" class="checkout-delete">
+                <img src="./images/icon-delete.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          `;
+  cartInfo.innerHTML = cartHtml;
+};
