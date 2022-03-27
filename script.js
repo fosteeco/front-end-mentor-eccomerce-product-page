@@ -114,5 +114,17 @@ avatar.addEventListener("click", () => {
 
 /* Add to cart */
 const addtoCartBtn = document.querySelector("#add-to-cart");
+const toastMessage = document.querySelector("#toast-message");
 
-addtoCartBtn.addEventListener("click", () => {});
+const showToast = () => {
+  toastMessage.classList.add("show");
+  setTimeout(() => {
+    toastMessage.classList.remove("show");
+  }, 2000);
+};
+addtoCartBtn.addEventListener("click", () => {
+  if (qVal >= 1) {
+    toastMessage.innerHTML = `<h3>Added ${qVal} Shoe(s) to cart<h3>`;
+    showToast();
+  }
+});
