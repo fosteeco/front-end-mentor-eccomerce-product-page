@@ -102,31 +102,54 @@ const changeMobileImage = () => {
   mobileImage.src = Object.values(images)[imagePos];
 };
 
-/* Avatar cart code */
+/* Cart Click code */
 
-const avatar = document.querySelector("#avatar");
+const cart = document.querySelector("#cart");
 const cartPreview = document.querySelector("#cart-preview");
 const cartInfo = document.querySelector("#cart-info");
 
-avatar.addEventListener("click", () => {
+cart.addEventListener("click", () => {
   cartPreview.classList.toggle("hide");
   console.log("clicked on avatar");
 });
 
+document.addEventListener(
+  "click",
+  function (event) {
+    // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+    if (
+      !event.target.closest(".cart-preview") &&
+      !event.target.matches("#cart")
+    ) {
+      cartPreview.classList.add("hide");
+    }
+  },
+  false
+);
+
 /* Add to cart */
 const addtoCartBtn = document.querySelector("#add-to-cart");
 const toastMessage = document.querySelector("#toast-message");
+const cartQuantityDiv = document.querySelector("#cart-quantity");
+let toastTimeout;
 
 const showToast = () => {
   toastMessage.classList.add("show");
-  setTimeout(() => {
+  toastTimeout = setTimeout(() => {
     toastMessage.classList.remove("show");
   }, 2000);
 };
 
+const hideToast = () => {
+  if (toastMessage.classList.contains("show")) {
+    toastMessage.classList.remove("show");
+    clearTimeout(toastTimeout);
+  }
+};
+
 addtoCartBtn.addEventListener("click", () => {
   if (qVal >= 1) {
-    toastMessage.innerHTML = `<h3>Added ${qVal} Shoe(s) to cart<h3>`;
+    toastMessage.innerHTML = `<h3>Added ${qVal} Shoe(s) to cart <button class="hide-toast" onClick="hideToast()">X</button><h3>`;
     showToast();
     buildCartPreview(qVal);
   }
@@ -134,6 +157,7 @@ addtoCartBtn.addEventListener("click", () => {
 
 const setEmptyCart = () => {
   cartInfo.innerHTML = `<div class="cart-info empty">Your cart is empty</div>`;
+  cartQuantityDiv.innerHTML = "";
 };
 
 const buildCartPreview = (quantity) => {
@@ -160,4 +184,5 @@ const buildCartPreview = (quantity) => {
           </div>
           `;
   cartInfo.innerHTML = cartHtml;
+  cartQuantityDiv.innerHTML = qVal;
 };

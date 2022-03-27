@@ -37,7 +37,10 @@
           <li><a href="">Contact</a></li>
         </ul>
         <ul class="account-nav">
-          <li><img src="./images/icon-cart.svg" alt="" /></li>
+          <li class="cart-nav">
+            <img id="cart" src="./images/icon-cart.svg" alt="" />
+            <div id="cart-quantity" class="cart-quantity"></div>
+          </li>
           <li class="avatar-container">
             <img
               id="avatar"
@@ -47,7 +50,7 @@
             />
           </li>
         </ul>
-        <div id="cart-preview" class="cart-preview">
+        <div id="cart-preview" class="cart-preview hide">
           <h3>Cart</h3>
           <div id="cart-info" class="cart-info empty">Your cart is empty</div>
         </div>
