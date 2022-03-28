@@ -442,7 +442,7 @@ button.mobile-nav-button {
 }
 
 .toast-message {
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: -100%;
   z-index: 999;
@@ -539,5 +539,8 @@ button.hide-toast {
   }
   header hr {
     display: none;
+  }
+  .toast-message {
+    position: fixed;
   }
 }
